@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param {Object} payload 
  */
 export const verifyUser = async (payload) => {
-   let result = await axios.post('http://7bf1c066e8fd.ngrok.io/api/users/login', payload)
+   let result = await axios.post('https://reactlogin46.herokuapp.com/api/users/login', payload)
         .then(response => {
             if (response.data.message === "success") return { result: true, message: "valid User" }
             return { result: false, message: response.data.message }
